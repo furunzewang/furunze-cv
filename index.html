@@ -3,74 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Furunze Wang · Marketing Manager</title>
-  <meta name="description" content="Currículum online de Furunze Wang (Fur), Marketing Manager en Eaship, Valencia.">
+  <title>Furunze Wang · Marketing B2B, Fundraising e IA aplicada</title>
+  <meta name="description" content="Furunze Wang (Fur): Marketing B2B, fundraising e IA aplicada. Responsable de Marketing en Eaship TMS, Valencia. Cerró una ronda seed de 1M€ con un objetivo inicial de 500.000 €.">
+  <meta name="author" content="Furunze Wang">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="canonical" href="https://furunzewang.github.io/furunze-cv/">
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Furunze Wang · CV">
+  <meta property="og:title" content="Furunze Wang · Marketing B2B, Fundraising e IA aplicada">
+  <meta property="og:description" content="Responsable de Marketing en Eaship TMS (Valencia). Ronda seed de 1M€ cerrada, 2× sobre el objetivo. B2B Marketing · Fundraising · Applied AI.">
+  <meta property="og:url" content="https://furunzewang.github.io/furunze-cv/">
+  <meta property="og:image" content="https://furunzewang.github.io/furunze-cv/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Furunze Wang — Marketing B2B · Fundraising · IA aplicada">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="profile:first_name" content="Furunze">
+  <meta property="profile:last_name" content="Wang">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Furunze Wang · Marketing B2B, Fundraising e IA aplicada">
+  <meta name="twitter:description" content="Responsable de Marketing en Eaship TMS (Valencia). Ronda seed de 1M€ cerrada, 2× sobre el objetivo.">
+  <meta name="twitter:image" content="https://furunzewang.github.io/furunze-cv/og-image.jpg">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Furunze Wang",
+    "alternateName": "Fur",
+    "jobTitle": "Responsable de Marketing / Marketing Lead",
+    "worksFor": { "@type": "Organization", "name": "Eaship TMS" },
+    "alumniOf": [
+      { "@type": "EducationalOrganization", "name": "EDEM Escuela de Empresarios" },
+      { "@type": "EducationalOrganization", "name": "Laurea University of Applied Sciences" }
+    ],
+    "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" },
+    "email": "mailto:furunzewang@gmail.com",
+    "image": "https://furunzewang.github.io/furunze-cv/foto-perfil.jpg",
+    "url": "https://furunzewang.github.io/furunze-cv/",
+    "sameAs": ["https://www.linkedin.com/in/furunze-wang-225446219/"],
+    "knowsLanguage": ["es", "en", "it"]
+  }
+  </script>
+  <!-- Aplica el idioma guardado antes de pintar, para evitar un parpadeo -->
+  <script>
+    try {
+      var q = new URLSearchParams(location.search).get("lang");
+      var l = (q === "en" || q === "es") ? q : localStorage.getItem("cv-lang");
+      if (l === "en") document.documentElement.lang = "en";
+    } catch (e) {}
+  </script>
 </head>
 <body>
-  <main class="card">
-    <header class="hero">
-      <div class="avatar" aria-hidden="true">FW</div>
-      <div>
-        <h1>Furunze Wang <span class="nick">“Fur”</span></h1>
-        <p class="headline">Marketing Manager en <strong>Eaship</strong> <span class="dot">·</span> startup SaaS de logística</p>
+  <a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+  <!-- ============ Navegación ============ -->
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="Furunze Wang — inicio" data-i18n-attr="aria-label:brandLabel">
+        <span class="brand-mark" aria-hidden="true">FW</span>
+        <span class="brand-name">Furunze Wang</span>
+      </a>
+      <nav class="nav-links" aria-label="Secciones" data-i18n-attr="aria-label:navLabel">
+        <a href="#about" data-i18n="navAbout">Sobre mí</a>
+        <a href="#experience" data-i18n="navExperience">Experiencia</a>
+        <a href="#education" data-i18n="navEducation">Formación</a>
+        <a href="#skills" data-i18n="navSkills">Aptitudes</a>
+        <a href="#contact" data-i18n="navContact">Contacto</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" type="button" id="lang-toggle" aria-label="Switch to English" lang="en">
+          <span class="lang-opt" data-lang="es">ES</span><span class="lang-opt" data-lang="en">EN</span>
+        </button>
+        <button class="btn btn-sm btn-primary js-print" type="button" aria-label="Descargar CV (PDF)" data-i18n-attr="aria-label:ctaPdf">
+          <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 16l-5-5 1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11l-5 5Zm-7 4v-2h14v2H5Z"/></svg>
+          <span class="hide-xs" data-i18n="pdfShort">CV en PDF</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+
+    <!-- ============ Cabecera ============ -->
+    <section class="hero card" aria-labelledby="name">
+      <div class="avatar">
+        <span class="avatar-fallback" aria-hidden="true">FW</span>
+        <img src="foto-perfil.jpg" width="480" height="480" alt="Retrato de Furunze Wang" data-i18n-attr="alt:photoAlt" onerror="this.remove()">
+      </div>
+      <div class="hero-text">
+        <h1 id="name">Furunze Wang <span class="nick">“Fur”</span></h1>
+        <p class="headline">
+          <span class="pillars" data-i18n="pillars">Marketing B2B · Fundraising · IA aplicada</span>
+          <span class="role" data-i18n="role">Responsable de Marketing en <strong>Eaship TMS</strong></span>
+        </p>
         <p class="location">
           <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-          Valencia, España
+          <span data-i18n="location">Valencia, España</span>
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="mailto:furunzewang@gmail.com">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/></svg>
+            <span data-i18n="ctaEmail">Escríbeme</span>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/furunze-wang-225446219/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+            LinkedIn
+          </a>
+          <button class="btn js-print" type="button">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 16l-5-5 1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11l-5 5Zm-7 4v-2h14v2H5Z"/></svg>
+            <span data-i18n="ctaPdf">Descargar CV (PDF)</span>
+          </button>
+        </div>
+        <!-- Solo en la versión impresa -->
+        <p class="print-contact">
+          furunzewang@gmail.com · linkedin.com/in/furunze-wang-225446219 · furunzewang.github.io/furunze-cv
         </p>
       </div>
-    </header>
+    </section>
 
-    <div class="grid">
-      <section class="about">
-        <h2>Sobre mí</h2>
-        <p>
-          Estudié ADE en <strong>EDEM Escuela de Empresarios</strong> y un máster en Marketing y Ventas Digitales.
-          En Eaship, como becario, organicé una ronda de inversión de <strong>1M€</strong> (el objetivo inicial era 500k€)
-          y ahora dirijo la creación del departamento de marketing desde cero junto a un CMO externo.
+    <!-- ============ Sobre mí ============ -->
+    <section id="about" class="card section" aria-labelledby="about-title">
+      <h2 id="about-title" class="section-title" data-i18n="aboutTitle">Sobre mí</h2>
+      <div class="about-grid">
+        <p class="lead" data-i18n="aboutText">
+          Entré en <strong>Eaship TMS</strong>, un SaaS B2B que digitaliza el transporte de fabricantes industriales, como becario.
+          En 2025 organicé su ronda seed: salimos a buscar 500.000&nbsp;€ y cerramos <strong>1M€</strong>.
+          Hoy lidero la creación del departamento de marketing desde cero.
+          Me muevo entre el marketing y los números, y uso la IA a diario para hacer más con menos.
         </p>
+        <ul class="stats" aria-label="Cifras destacadas" data-i18n-attr="aria-label:statsLabel">
+          <li class="stat">
+            <span class="stat-num" data-i18n="stat1Num">1M€</span>
+            <span class="stat-label" data-i18n="stat1">ronda seed cerrada</span>
+          </li>
+          <li class="stat">
+            <span class="stat-num">2×</span>
+            <span class="stat-label" data-i18n="stat2">sobre el objetivo inicial (500.000&nbsp;€)</span>
+          </li>
+          <li class="stat">
+            <span class="stat-num">0→1</span>
+            <span class="stat-label" data-i18n="stat3">departamento de marketing</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="stats">
-          <div class="stat"><span class="num" data-target="1">1</span><span class="unit">M€</span><span class="label">ronda levantada</span></div>
-          <div class="stat"><span class="num" data-target="2">2</span><span class="unit">×</span><span class="label">sobre el objetivo</span></div>
-          <div class="stat"><span class="num">0</span><span class="unit">→1</span><span class="label">dpto. de marketing</span></div>
+    <!-- ============ Experiencia ============ -->
+    <section id="experience" class="card section" aria-labelledby="exp-title">
+      <h2 id="exp-title" class="section-title" data-i18n="expTitle">Experiencia</h2>
+
+      <ol class="timeline">
+        <li class="tl-item">
+          <div class="tl-head">
+            <h3 class="org">Eaship TMS</h3>
+            <p class="org-desc" data-i18n="eashipDesc">SaaS B2B de logística · Valencia</p>
+          </div>
+
+          <div class="roles">
+            <article class="job">
+              <div class="job-head">
+                <h4 data-i18n="job1Title">Responsable de Marketing</h4>
+                <span class="badge" data-i18n="now">Actual</span>
+              </div>
+              <p class="when">
+                <time datetime="2026-01" data-i18n="job1When">ene. 2026 – actualidad</time>
+                <span aria-hidden="true">·</span>
+                <span data-i18n="job1Where">Valencia (híbrido)</span>
+              </p>
+              <p data-i18n="job1Text">Creación del departamento de marketing desde cero: generación de leads cualificados, contenido para el equipo de ventas, alianzas y partnerships, y gestión de eventos.</p>
+            </article>
+
+            <article class="job">
+              <div class="job-head">
+                <h4 data-i18n="job2Title">Fundraising e Inversión</h4>
+              </div>
+              <p class="when"><time datetime="2025-02" data-i18n="job2When">feb. 2025 – dic. 2025</time></p>
+              <ul class="bullets" data-i18n="job2List">
+                <li>Organización y ejecución de una <strong>ronda seed de 1M€</strong> para una startup SaaS B2B de logística (objetivo inicial: 500.000&nbsp;€).</li>
+                <li>Modelo financiero, business plan, análisis de mercado y materiales para inversores.</li>
+                <li>Estrategia de financiación no dilutiva.</li>
+                <li>Trabajo directo con los fundadores y los equipos de tecnología y ventas.</li>
+              </ul>
+            </article>
+          </div>
+        </li>
+
+        <li class="tl-item">
+          <div class="tl-head">
+            <h3 class="org">Roig Arena</h3>
+          </div>
+          <article class="job">
+            <div class="job-head">
+              <h4 data-i18n="job3Title">Staff (jornada parcial)</h4>
+            </div>
+            <p class="when">
+              <time datetime="2024-08" data-i18n="job3When">ago. 2024 – jun. 2025</time>
+              <span aria-hidden="true">·</span> Valencia
+            </p>
+          </article>
+        </li>
+
+        <li class="tl-item tl-compact">
+          <div class="tl-head">
+            <h3 class="org" data-i18n="internTitle">Prácticas</h3>
+          </div>
+          <ul class="compact-list">
+            <li>
+              <span class="c-org">Grupo Cajamar</span>
+              <span class="c-role" data-i18n="int1">Prácticas en Contabilidad y Embargos</span>
+              <time class="c-when" datetime="2024-06" data-i18n="int1When">jun. – jul. 2024</time>
+            </li>
+            <li>
+              <span class="c-org">Umivale Activa</span>
+              <span class="c-role" data-i18n="int2">Prácticas en Marketing y Finanzas</span>
+              <time class="c-when" datetime="2023-06" data-i18n="int2When">jun. – jul. 2023</time>
+            </li>
+            <li>
+              <span class="c-org">Mercadona</span>
+              <span class="c-role" data-i18n="int3">Prácticas en tienda y secciones</span>
+              <time class="c-when" datetime="2022-06" data-i18n="int3When">jun. – jul. 2022</time>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ Formación y certificaciones ============ -->
+    <div id="education" class="split">
+      <section class="card section" aria-labelledby="edu-title">
+        <h2 id="edu-title" class="section-title" data-i18n="eduTitle">Formación</h2>
+        <ul class="entries">
+          <li class="entry">
+            <h3 data-i18n="edu1">Máster en Marketing y Ventas Digitales</h3>
+            <p class="entry-org">EDEM Escuela de Empresarios</p>
+            <p class="when"><time datetime="2025-10" data-i18n="edu1When">oct. 2025 – jul. 2026</time></p>
+          </li>
+          <li class="entry">
+            <h3 data-i18n="edu2">Intercambio académico</h3>
+            <p class="entry-org" data-i18n="edu2Org">Laurea University of Applied Sciences (Finlandia)</p>
+            <p class="when"><time datetime="2023-08" data-i18n="edu2When">ago. – dic. 2023</time></p>
+          </li>
+          <li class="entry">
+            <h3 data-i18n="edu3">Grado en Administración y Dirección de Empresas (ADE)</h3>
+            <p class="entry-org">EDEM Escuela de Empresarios</p>
+            <p class="when"><time datetime="2021-09" data-i18n="edu3When">sep. 2021 – jul. 2025</time></p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card section" aria-labelledby="cert-title">
+        <h2 id="cert-title" class="section-title" data-i18n="certTitle">Certificaciones</h2>
+        <ul class="entries">
+          <li class="entry">
+            <h3>Claude 101</h3>
+            <p class="entry-org">Anthropic (Claude Academy)</p>
+            <p class="when"><time datetime="2026-09" data-i18n="cert1When">sep. 2026</time></p>
+          </li>
+          <li class="entry">
+            <h3 data-i18n="cert2">Plan General Contable</h3>
+            <p class="entry-org">Deloitte</p>
+            <p class="when"><time datetime="2025-07" data-i18n="cert2When">jul. 2025</time></p>
+          </li>
+          <li class="entry">
+            <h3 data-i18n="cert3">Inglés B2</h3>
+            <p class="entry-org">British Council</p>
+            <p class="when"><time datetime="2022-02" data-i18n="cert3When">feb. 2022</time></p>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- ============ Aptitudes e idiomas ============ -->
+    <div id="skills" class="split">
+      <section class="card section" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-title" data-i18n="skillsTitle">Herramientas y aptitudes</h2>
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h3 data-i18n="sgMarketing">Marketing B2B</h3>
+            <ul class="tags">
+              <li>HubSpot</li>
+              <li data-i18n="skLeads">Generación de leads</li>
+              <li data-i18n="skContent">Marketing de contenidos</li>
+              <li data-i18n="skEvents">Gestión de eventos</li>
+              <li>Canva</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="sgFinance">Finanzas y fundraising</h3>
+            <ul class="tags">
+              <li data-i18n="skModel">Modelado financiero</li>
+              <li>Business plan</li>
+              <li data-i18n="skData">Análisis de datos</li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3 data-i18n="sgAI">IA aplicada y productividad</h3>
+            <ul class="tags">
+              <li data-i18n="skClaude">Claude / IA generativa</li>
+              <li>Gamma</li>
+              <li>Notion</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <aside class="side">
-        <section>
-          <h2>Idiomas</h2>
-          <ul class="langs">
-            <li><span>Español</span><em>Nativo</em></li>
-            <li><span>Valenciano</span><em>Fluido</em></li>
-            <li><span>Inglés</span><em>Profesional</em></li>
-            <li><span>Chino (Qingtian)</span><em>Hablado</em></li>
-            <li><span>Italiano</span><em class="learning">Aprendiendo</em></li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Contacto</h2>
-          <div class="links">
-            <a class="btn primary" href="https://www.linkedin.com/in/furunze-wang-225446219" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
-              LinkedIn
-            </a>
-            <a class="btn" id="email-link" href="mailto:[PON_TU_EMAIL_AQUI]">
-              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/></svg>
-              Email
-            </a>
-            <button class="btn ghost" id="copy-email" type="button" title="Copiar email">Copiar email</button>
-          </div>
-        </section>
-      </aside>
+      <section class="card section" aria-labelledby="lang-title">
+        <h2 id="lang-title" class="section-title" data-i18n="langTitle">Idiomas</h2>
+        <ul class="langs">
+          <li><span data-i18n="lang1">Español</span><em data-i18n="lang1Lvl">Nativo</em></li>
+          <li><span data-i18n="lang2">Inglés</span><em data-i18n="lang2Lvl">Avanzado (B2 certificado)</em></li>
+          <li><span data-i18n="lang3">Italiano</span><em class="learning" data-i18n="lang3Lvl">En aprendizaje</em></li>
+        </ul>
+      </section>
     </div>
 
-    <footer class="foot">© <span id="year"></span> Furunze Wang</footer>
+    <!-- ============ Contacto ============ -->
+    <section id="contact" class="card section contact" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title" class="contact-title" data-i18n="contactTitle">¿Hablamos?</h2>
+        <p class="contact-text" data-i18n="contactText">Estoy abierto a conversar sobre proyectos y oportunidades donde se crucen el marketing, las finanzas y la IA.</p>
+        <p class="contact-email"><a href="mailto:furunzewang@gmail.com" id="email-link">furunzewang@gmail.com</a></p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-light" href="mailto:furunzewang@gmail.com">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 5-8-5V6l8 5 8-5v2.24Z"/></svg>
+          <span data-i18n="ctaSend">Enviar email</span>
+        </a>
+        <button class="btn btn-outline-light" type="button" id="copy-email">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg>
+          <span id="copy-label" data-i18n="ctaCopy">Copiar email</span>
+        </button>
+        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/furunze-wang-225446219/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+          LinkedIn
+        </a>
+      </div>
+      <p class="sr-only" role="status" aria-live="polite" id="copy-status"></p>
+    </section>
   </main>
+
+  <footer class="foot">
+    <p>© <span id="year">2026</span> Furunze Wang · <a href="#top" data-i18n="backTop">Volver arriba ↑</a></p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

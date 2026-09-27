@@ -1,23 +1,37 @@
 # Furunze Wang · CV online
 
-Currículum online de una sola página, hecho con HTML, CSS y JavaScript puros (sin frameworks).
+Currículum online bilingüe (español / inglés), hecho con HTML, CSS y JavaScript puros (sin frameworks), listo para GitHub Pages.
 
-- `index.html`: contenido de la página
-- `styles.css`: diseño (tema claro, acento verde azulado, adaptado a móvil)
-- `script.js`: pequeños detalles interactivos (contadores y botón «Copiar email»)
+## Archivos
 
-## Antes de publicar
+| Archivo | Qué es |
+| --- | --- |
+| `index.html` | Contenido en español (idioma por defecto), metaetiquetas SEO / Open Graph y datos estructurados |
+| `styles.css` | Diseño en pantalla y hoja de impresión A4 para el PDF |
+| `script.js` | Cambio de idioma (textos en inglés), copiar email, botón de PDF y navegación activa |
+| `foto-perfil.jpg` | Foto de perfil recortada y optimizada (480×480, sin metadatos) |
+| `og-image.jpg` | Imagen que aparece al compartir el enlace (LinkedIn, WhatsApp…) |
+| `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Iconos con las iniciales FW |
 
-Sustituye `[PON_TU_EMAIL_AQUI]` en `index.html` por tu email real (aparece en el enlace `mailto:`).
+## Editar contenido
+
+- **Español:** directamente en `index.html`.
+- **Inglés:** en el objeto `EN` al principio de `script.js`. Cada clave coincide con un atributo `data-i18n="…"` del HTML.
+- **Enlace directo en inglés:** `https://furunzewang.github.io/furunze-cv/?lang=en`, útil para reclutadores internacionales.
+
+## Descargar el CV en PDF
+
+El botón «Descargar CV (PDF)» abre el diálogo de impresión. Elige **Guardar como PDF**, tamaño **A4** y márgenes **predeterminados**. El PDF sale en el idioma que tengas activo.
 
 ## Publicar con GitHub Pages (gratis)
 
-1. Haz merge de la pull request en la rama `main`.
+1. Haz merge de la pull request en `main`.
 2. En GitHub, entra en el repositorio → **Settings** → **Pages**.
 3. En **Build and deployment**, elige **Source: Deploy from a branch**.
 4. En **Branch**, selecciona `main` y la carpeta `/ (root)`. Pulsa **Save**.
-5. Espera uno o dos minutos: la web estará en `https://furunzewang.github.io/furunze-cv/`.
+5. En uno o dos minutos la web estará en `https://furunzewang.github.io/furunze-cv/`.
 
-> Nota: en cuentas gratuitas, GitHub Pages requiere que el repositorio sea **público**.
+> En cuentas gratuitas, GitHub Pages requiere que el repositorio sea **público**.
+> Si publicas en otra URL (por ejemplo, un dominio propio), actualiza en `index.html` las direcciones de `canonical`, `og:url`, `og:image` y `twitter:image`.
 
-Para ver la página en local, basta con abrir `index.html` en el navegador.
+Para verla en local, abre `index.html` en el navegador.
